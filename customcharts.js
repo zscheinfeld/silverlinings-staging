@@ -4,7 +4,7 @@ const myChart = new Chart(ctx, {
 
   type: 'bar',
   data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    labels: ['1600', '1800', '1900', '1950', '2000', '2024'],
     data : [],
     datasets: [
         {
