@@ -10,6 +10,10 @@ $( document ).ready(function() {
 
   })
 
+  //reset subchapter 1 
+
+
+
     $(".chapter-content-open").on('scroll', function() {
         $('.call-out-first').each(function() {
           if (isElementInViewport($(this))) {
@@ -60,6 +64,7 @@ $( document ).ready(function() {
       // next function
 
       $(".side-bar").click(function(){
+      
         console.log("nextclicked")
         if ($(this).hasClass("chapter-bar-next")){
                 $(this).parent().siblings(".open").prev().children(".side-bar").removeClass("prev")
@@ -194,14 +199,16 @@ countSubchapters()
 var lastsubchapter = 0;
 var subchapcount = 0;
 
-
+function addRemaining(){
 for (let x= 0; x<totalsubchapters-1; x++){
   remaininghtml += `<div class="upcoming-subchapter">
     1.${x+2}
   </div>`
 }
-
 $(".upcoming-subchapters-container").html(remaininghtml)
+}
+
+addRemaining()
 
 
 
@@ -246,7 +253,7 @@ function handleIntersection(entries, observer) {
   
                if (Number(dataId)== 3){
                 setTimeout(() => {
-                  $(".subchapter-nav-title").html("Mortality, productivity, <br> and fertility in the U.S.")
+                  $(".subchapter-nav-title").html("Mortality, productivity, and fertility in the U.S.")
                 }, 300);
                  
               }
