@@ -146,7 +146,7 @@ const myChart = new Chart(ctx, {
 
 function animateChart() {
     setTimeout(() => {
-        console.log("here")
+   
     myChart.data.datasets[0].data = [12, 19, 3, 5, 2, 3]
     myChart.data.datasets[1].data = [6, 12, 8, 10, 8, 13]
     myChart.update();
@@ -156,7 +156,7 @@ function animateChart() {
 function resetChart() {
    
     setTimeout(() => {
-        console.log("here")
+
         myChart.data.datasets[0].data = [0]
         myChart.data.datasets[1].data = [0]
         myChart.update();
